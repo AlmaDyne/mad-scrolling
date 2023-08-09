@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: url(texture_loop.png), linear-gradient(to bottom right, #fffb00, #0026ff),
+        linear-gradient(to top right, #ff0000, #00ff00);
+    background-blend-mode: hard-light;
+}
+
+.SmoothScroll {
+    scroll-behavior: smooth;
+}
+
+#ClickingObject {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: calc(50% - 300px/2);
+    left: calc(50% - 300px/2);
+    height: 300px;
+    width: 300px;
+    background-color: #fbff00;
+    color:#315366;
+    font-size: 24pt;
+    cursor: pointer;
+    border: 3px solid;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+#ClickingObject:active {
+    background-color: #ff0000 !important;
+}
+
+#ClickingObject:not([data-disabled]):active {
+    background-color: #ffe600 !important;
+}
+
+#ClickingObject.Finish {
+    transform: scale(0) rotate(7turn);
+}
+
+#ClickingObject > p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.ClickInfo {
+    margin-top: 50px;
+    font-size: 18pt;
+    opacity: 0.5;
+}
+
+#Pause {
+    position: fixed;
+    width: 80px;
+    height: 30px;
+    left: calc(50vw - 80px/2);
+    top: 50px;
+    z-index: 1;
+    font-size: 12pt;
+}
+
+#ScrollReset {
+    position: fixed;
+    width: 120px;
+    height: 54px;
+    left: 5%;
+    right: 0;
+    top: calc(50vh - 120px/2);
+    z-index: 1;
+    font-size: 12pt;
+    
+}
+
+.Arrow {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    margin-bottom: 3px;
+    vertical-align: baseline;
+    transform: rotate(45deg);
+}
+
+#ScrollType {
+    position: fixed;
+    width: 140px;
+    height: 50px;
+    right: 5%;
+    top: calc(50vh - 120px/2);
+    z-index: 1;
+    font-size: 12pt;
+}
+
+#ScrollType span {
+    color: #7913d8;
+}
+
+#CenteringElem {
+    position: fixed;
+    width: 130px;
+    height: 68px;
+    left: calc(50vw - 130px/2);
+    bottom: 50px;
+    z-index: 1;
+    font-size: 12pt;
+}
+
+#MedInfo {
+    position: relative;
+    width: 40%;
+    min-width: 280px;
+    top: 15%;
+    margin: auto;
+    margin-bottom: -4%;
+    padding: 8px;
+    color: #ffe600;
+    text-align: center;
+    font: 18px 'Arial';
+    line-height: 1.4em;
+    background-color: #ff4a87;
+    border: 2px solid #ff0000;
+    z-index: 2;
+}
+
+#ReadAgreement {
+    color: #0400ff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#ReadAgreement:active {
+    filter: brightness(0.8) contrast(1.2);
+}
+
+#MedAgreement {
+    display: none;
+    position: fixed;
+    width: 18%;
+    min-width: 200px;
+    right: 18%;
+    top: 20%;
+    padding: 10px 10px 44px;
+    color: white;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.4em;
+    background: #ad4000;
+    border: 2px solid #ff0000;
+    z-index: 3;
+}
+
+#CloseAgreement {
+    position: absolute;
+    width: 40px;
+    left: calc(50% - 40px/2);
+    bottom: 4px;
+    cursor: pointer;
+    filter: invert(100%);
+}
+
+#CloseAgreement:active {
+    filter: invert(70%);
+}

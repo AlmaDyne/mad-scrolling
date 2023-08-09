@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>TEST Project</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="MedInfo">
+            <p><b>Медицинское предупреждение: опасно для эпилептиков!</b></p>
+            <p id="ReadAgreement">Прочитать соглашение</p>
+            <section id="MedAgreement">
+                <p>Нажимая на любые кнопки в этом окне вы согласны с тем, что от 
+                    реализации данного кода вы можете получить эпилептический 
+                    припадок, ослепнуть или уничтожить свое эстетическое восприятие, 
+                    а попытки разобрать этот код могут привести к вывиху мозгов 
+                    и повышенному желанию его исправить.</p>
+                <img src="close.png" id="CloseAgreement" alt="Close">
+            </section>
+        </div>
+        <div id="ClickingObject">
+            <p><b>Клик для автоскролла!</b></p>
+        </div>
+        <button id="Pause" data-onclick="false"><b>Пауза</b></button>
+        <button id="ScrollReset">
+            <img src="arrow.png" class="Arrow" alt="arrow">
+            <b>В левый верхний угол</b>
+        </button>
+        <button id="ScrollType" data-type="fast">
+            <b>Тип скроллинга</b><br>(<span>мгновенный</span>)
+        </button>
+        <button id="CenteringElem"><b>Центрировать на главном элементе</b></button>
+        <script src="script.js" type="module"></script>
+    </body>
+</html>
